@@ -11,9 +11,10 @@ import QuestionDetail from './pages/QuestionDetail';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import LandingPage from './pages/LandingPage'; 
-import OpportunitiesPage from './pages/OpportunitiesPage';
+import OpportunitiesPage from './pages/OpportunitiesPage'; 
 import CreateOpportunity from './pages/CreateOpportunity';
 import MentorshipPage from './pages/MentorshipPage';
+import MentorProfile from './pages/MentorProfile';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -33,11 +34,10 @@ const App = () => {
             <Route path="/question/:id" element={<QuestionDetail />} />
             <Route path="/opportunities" element={<OpportunitiesPage />} />
             <Route path="/mentorship" element={<MentorshipPage />} />
+            <Route path="/mentor/:name" element={<MentorProfile />} />
             <Route path="/create-opportunity" element={<CreateOpportunity />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-
-           
+            <Route path="/about" element={<About />} />
 
             <Route
               path="/profile/:id"
